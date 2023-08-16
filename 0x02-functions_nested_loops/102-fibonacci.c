@@ -6,8 +6,6 @@
  * Return: Always zero for a successful code
  */
 
-#include <stdio.h>
-
 int main(void)
 {
 int n = 50;
