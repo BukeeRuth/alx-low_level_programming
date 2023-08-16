@@ -41,7 +41,7 @@ int main(void)
 		if (count != 98)
 			printf(", ");
 
-		fib3 = fib5
+		fib3 = fib5;
 		fib4 = fib6;
 		fib5 = a;
 		fib6 = b;
