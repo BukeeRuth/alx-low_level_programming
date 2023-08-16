@@ -8,23 +8,22 @@
 
 int main(void)
 {
-int n = 50;
-unsigned long fib[n];
-fib[0] = 1;
-fib[1] = 2;
+	int i;
+	unsigned long fib1 = 0, fib2 = 1, sum;
 
-int i;
-for (i = 2; i < n; i++)
-{
-fib[i] = fib[i - 1] + fib[i - 2];
-}
+	for (i = 0; i < 50; i++)
+	{
+		sum = fib1 + fib2;
+		printf("%lu", sum);
 
-for (i = 0; i < n; i++)
-{
-printf("%lu ", fib[i]);
-}
+		fib1 = fib2;
+		fib2 = sum;
 
-printf("\n");
+		if (i == 49)
+			printf("\n");
+		else
+			printf(", ");
+	}
 
-return (0);
+	return (0);
 }
