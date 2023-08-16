@@ -6,14 +6,16 @@
  * Return: Always zero for a successful code
  */
 
+#include <stdio.h>
+
 int main(void)
 {
-int n, i;
 int n = 50;
-uint64_t fib[n];
+unsigned long fib[n];
 fib[0] = 1;
 fib[1] = 2;
 
+int i;
 for (i = 2; i < n; i++)
 {
 fib[i] = fib[i - 1] + fib[i - 2];
@@ -21,7 +23,7 @@ fib[i] = fib[i - 1] + fib[i - 2];
 
 for (i = 0; i < n; i++)
 {
-printf("%" PRIu64 " ", fib[i];
+printf("%lu ", fib[i]);
 }
 
 printf("\n");
