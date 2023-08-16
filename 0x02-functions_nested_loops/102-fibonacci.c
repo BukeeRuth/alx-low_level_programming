@@ -8,19 +8,20 @@
 
 int main(void)
 {
+int n, i;
 int n = 50;
-long long int fib[n];
+uint64_t fib[n];
 fib[0] = 1;
 fib[1] = 2;
 
-for (int i = 2; i < n; i++)
+for (i = 2; i < n; i++)
 {
 fib[i] = fib[i - 1] + fib[i - 2];
 }
 
-for (int i = 0; i < n; i++)
+for (i = 0; i < n; i++)
 {
-printf("%lld ", fib[i]);
+printf("%" PRIu64 " ", fib[i];
 }
 
 printf("\n");
