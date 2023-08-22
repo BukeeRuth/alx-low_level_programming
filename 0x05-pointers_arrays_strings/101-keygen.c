@@ -24,19 +24,17 @@ srand(time(NULL));
 for (i = 0; i < 100; i++)
 {
 passwd[i] = rand() % 78;
-totalSum += passwd[i];
+totalSum += (passwd[i] + '0');
 putchar(passwd[i] + '0');
 
 if ((2772 - totalSum) < 78)
 {
-x = 2772 - totalSum;
+x = 2772 - totalSum - '0';
 totalSum += x;
 putchar(x + '0');
 break;
 }
 }
-
-putchar('\n');
 
 return (0);
 }
