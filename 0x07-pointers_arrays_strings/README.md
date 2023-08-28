@@ -1,0 +1,1 @@
+raedme for pointers7
