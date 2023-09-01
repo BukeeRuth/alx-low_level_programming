@@ -15,12 +15,12 @@ int main(int argc, char **argv)
 
 	if (argc < 3)
 	{
-		printf("Null\n");
+		printf("Error\n");
 		return (1);
 	}
 
-	x = _atoi(argv[1]);
-	y = _atoi(argv[2]);
+	x = atoi(argv[1]);
+	y = atoi(argv[2]);
 	printf("%d\n", x * y);
 
 	return (0);
