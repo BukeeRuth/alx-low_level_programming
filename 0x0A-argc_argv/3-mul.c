@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -18,8 +19,8 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-	x = atoi(argv[1]);
-	y = atoi(argv[2]);
+	x = _atoi(argv[1]);
+	y = _atoi(argv[2]);
 	printf("%d\n", x * y);
 
 	return (0);
