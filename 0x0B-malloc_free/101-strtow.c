@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 
-void util(char **, char *);
+void fetcher(char **, char *);
 void create_word(char **, char *, int, int, int);
 
 /**
@@ -39,17 +39,17 @@ char **strtow(char *str)
 	if (words == NULL)
 		return (NULL);
 
-	util(words, str);
+	fetcher(words, str);
 	words[len] = NULL;
 	return (words);
 }
 
 /**
- * util - fetches words into an array
+ * fetcher - fetches words into an array
  * @words: the strings array
  * @str: the string
  */
-void util(char **words, char *str)
+void fetcher(char **words, char *str)
 {
 	int i, j, start, flag;
 
