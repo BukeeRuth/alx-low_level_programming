@@ -12,7 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	int (*oprt)(int, int);
+	int x, y;
+	char *operator;
 
 	if (argc != 4)
 	{
@@ -20,15 +21,26 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	oprt = get_op_func(argv[2]);
+	x = atoi(argv[1]);
+	y = atoi(argv[3]);
+	operator = argv[2];
 
-	if (!oprt)
+
+	if (get_op_func(operator) == NULL || operator[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
+
+	if ((*operator == 47 || *operator == 37) && y == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+	printf("%d\n", get_op_func(operator)(x, y));
+
 	return (0);
 }
 
