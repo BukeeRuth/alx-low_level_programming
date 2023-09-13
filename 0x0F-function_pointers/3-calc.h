@@ -1,11 +1,11 @@
-#ifndef _CALC_H
-#define _CALC_H
+#ifndef __HEADER__
+#define __HEADER__
 
 /**
- * struct op - Struct op
+ * struct op - class object
  *
- * @op: The operator
- * @f: The function associated
+ * @op: operator
+ * @f: The function
 */
 typedef struct op
 {
@@ -20,4 +20,4 @@ int op_div(int a, int b);
 int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 
-#endif /* _CALC_H */
+#endif
