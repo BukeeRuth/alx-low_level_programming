@@ -4,9 +4,9 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
-* struct token - token class
-* @token: format 
-* @f: function pointer
+* struct token - token
+* @token: format token
+* @f: function associate
 */
 
 typedef struct token
