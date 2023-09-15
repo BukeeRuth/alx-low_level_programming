@@ -4,16 +4,16 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
-* struct binder - binder class
-* @token: format binder
-* @f: function associate
+* struct token - token class
+* @token: format 
+* @f: function pointer
 */
 
-typedef struct binder
+typedef struct token
 {
-  char *binder;
+  char *token;
 void (*f)(char *, va_list);
-} binder_b;
+} token_t;
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
