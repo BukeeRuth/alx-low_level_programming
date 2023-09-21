@@ -1,22 +1,22 @@
-; Declare C functions
-extern printf
+; Declare needed C  functions
+	extern	printf		; the declared C function
 
-section .data
-    message db "Hello, Holberton", 0 ; Null-terminated message string
-    format db "%s\n", 0             ; Null-terminated format string for printf
+	section .data		; Data section with initialized variables
+msg:	db "Hello, Holberton", 0; C string
+fmt:	db "%s", 10, 0		; Format specifier, "\n",'0'
 
-section .text
-global main
+	section .text		; Code section.
 
-main:
-    push rbp               ; Set up stack frame
+	global main		; the standard gcc entry point
+main:				; the program label for the entry point
+	push	rbp		; set up alligned stack frame
 
-    mov rdi, format       ; Load format string address
-    mov rsi, message      ; Load message string address
-    xor rax, rax          ; Clear RAX (no floating-point arguments)
-    call printf           ; Call printf function
+	mov	rdi,fmt
+	mov	rsi,msg
+	mov	rax,0		; load format and message string address
+	call	printf		; Call printf function
 
-    pop rbp                ; Restore stack
-    xor rax, rax           ; Return value (no error)
-    ret                    ; Return
+	pop	rbp		; restore stack
 
+	mov	rax,0		; return value (no error)
+	ret			; return
