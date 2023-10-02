@@ -3,10 +3,11 @@
 /**
  * main - Entry point to  the entire program
  * description: copies the content of a file to another file
- * @argc: number of arguments
- * @argv: array of arguments
+ * @argc: arguments count
+ * @argv: arguments vector
  * Return: 0 on success otherwise 97, 98, 99 or 100 on failure
  */
+
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to, read_bytes, write_bytes;
